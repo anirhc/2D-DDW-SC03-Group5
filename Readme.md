@@ -1,4 +1,5 @@
 # Data Driven World - Bonus Project
+In this project, we will predict the target value of your interested features by multiple linear regression.
 
 ## Group Members
 SC03 Group 5
@@ -10,23 +11,21 @@ SC03 Group 5
 
 ## Setup
 #### Vocareum
-If you use Vocareum terminal to run your Flask application, you can do so by running the `runflaskvoc.sh` script. Before running this script, make sure the `voc=True` is set true in the following line inside `mp_sort/app/__init__.py`.
+Since we are using the  Vocareum terminal to run our Flask application, we can do so by running the `runflaskvoc.sh` script. Before running this script, we need to make sure the `voc=True` is set true in the following line inside `2D-DDW-SC03-Group5/app/__init__.py`.
 
 ```python
-# set voc=False if you run on local computer
 application.wsgi_app = PrefixMiddleware(application.wsgi_app, voc=True)
+```
+Use `cd` to navigate to the `2D-DDW-SC03-Group5`folder
+
+```shell
+> cd 2D-DDW-SC03-Group5
 ```
 
 Now, make sure you are inside the `2D-DDW-SC03-Group5` folder by using the `pwd` command. 
 
 ```shell
 > pwd
-```
-
-Use `cd` to navigate to the `2D-DDW-SC03-Group5`
-
-```shell
-> cd 2D-DDW-SC03-Group5
 ```
 
 Make sure that the script is executable by running the following command. 
