@@ -16,7 +16,7 @@ Since we are using the  Vocareum terminal to run our Flask application, we can d
 ```python
 application.wsgi_app = PrefixMiddleware(application.wsgi_app, voc=True)
 ```
-Use `cd` to navigate to the `2D-DDW-SC03-Group5`folder
+Use `cd` to navigate to the `2D-DDW-SC03-Group5` folder
 
 ```shell
 > cd 2D-DDW-SC03-Group5
