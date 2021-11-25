@@ -1,5 +1,5 @@
 # Data Driven World - Bonus Project
-In this project, we will predict the target value of your interested features by multiple linear regression.
+In this project, we will predict the target value from the features entered by the user using multiple linear regression.
 
 ## Group Members
 SC03 Group 5
