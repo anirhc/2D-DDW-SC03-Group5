@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>2D Project – Group 5</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/css/main.css')}}">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>2D Challenge</h1>
+							<p>Data Driven World, Group 5, Cohort 3</p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="{{ url_for('static',filename='images/pic01.jpg')}}" alt="" /></span> /* Hình nhóm ở đây nha */
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>MULTILPLE LINEAR REGRESSION</h2>
+							<ul class="actions">
+								<li><a href="#second" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<p>In this project, we will assist you to predict the target value of your interested features by multiple linear regression.</p>
+							<span class="image main"><img src="{{ url_for('static',filename='images/pic02.jpg')}}" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section id="second">
+						<header>
+							<h2>PREDICTION</h2>
+						</header>
+						<div class="content">
+							<form>
+								<p>Please enter your feature names and feature values, if your number of features are smaller than 5, please ignore those boxes.</p>
+								<b>Feature 1 Name: </b><input type="text" id="feature_1_name" />
+								<b>Feature 1 Value: </b><input type="text" id="feature_1_value" /> <br>
+								<b>Feature 2 Name: </b><input type="text" id="feature_2_name" />
+								<b>Feature 2 Value: </b><input type="text" id="feature_2_value" /> <br>
+								<b>Feature 3 Name: </b><input type="text" id="feature_3_name" />
+								<b>Feature 3 Value: </b><input type="text" id="feature_3_value" /> <br>
+								<b>Feature 4 Name: </b><input type="text" id="feature_4_name" />
+								<b>Feature 4 Value: </b><input type="text" id="feature_4_value" /> <br>
+								<b>Feature 5 Name: </b><input type="text" id="feature_5_name" />
+								<b>Feature 5 Value: </b><input type="text" id="feature_5_value" /> <br>
+								<p>Please enter ...</p>
+								<b>Intercept: </b><input type="text" id="coeff_0" /><br>
+								<b>Coefficient 1: </b><input type="text" id="coeff_1" /><br>
+								<b>Coefficient 2: </b><input type="text" id="coeff_2" /><br>
+								<b>Coefficient 3: </b><input type="text" id="coeff_3" /><br>
+								<b>Coefficient 4: </b><input type="text" id="coeff_4" /><br>
+								<b>Coefficient 5: </b><input type="text" id="coeff_5" /><br>					
+								
+
+
+								<ul class="actions">
+									<li><a class="button primary large" onclick="Predict()">Predict the result</a></li>
+								</ul>
+								Result: <span id="kq"></span>
+							</form>
+						
+							<script>
+								function Predict(){
+									var f1n = document.querySelector('#feature_1_name').value;
+									var f1v = document.querySelector('#feature_1_value').value;
+									var f1c = document.querySelector('#coeff_1').value;
+									if (f1v == ''){
+										var f1v = 0;
+									}
+									if (f1c == ''){
+										var f1c = 0;
+									}
+									
+									var f2n = document.querySelector('#feature_2_name').value;
+									var f2v = document.querySelector('#feature_2_value').value;
+									var f2c = document.querySelector('#coeff_2').value;
+									if (f2v == ''){
+										var f2v = 0;
+									}
+									if (f2c == ''){
+										var f2c = 0;
+									}
+
+									var f3n = document.querySelector('#feature_3_name').value;
+									var f3v = document.querySelector('#feature_3_value').value;
+									var f3c = document.querySelector('#coeff_3').value;
+									if (f3v == ''){
+										var f3v = 0;
+									}
+									if (f3c == ''){
+										var f3c = 0;
+									}
+
+									var f4n = document.querySelector('#feature_4_name').value;
+									var f4v = document.querySelector('#feature_4_value').value;
+									var f4c = document.querySelector('#coeff_4').value;
+									if (f4v == ''){
+										var f4v = 0;
+									}
+									if (f4c == ''){
+										var f4c = 0;
+									}
+
+									var f5n = document.querySelector('#feature_5_name').value;
+									var f5v = document.querySelector('#feature_5_value').value;
+									var f5c = document.querySelector('#coeff_5').value;
+									if (f5v == ''){
+										var f5v = 0;
+									}
+									if (f5c == ''){
+										var f5c = 0;
+									}
+
+									var intercept = document.querySelector('#coeff_0').value;
+									if (intercept == ''){
+										var intercept = 0;
+									}
+
+									
+									if (f1v == ''){
+										var f1v = 0;
+									}
+									if (f1v == ''){
+										var f1v = 0;
+									}
+									if (f1v == ''){
+										var f1v = 0;
+									}
+
+
+									var result = parseFloat(intercept) + parseFloat(f1v)*parseFloat(f1c) + parseFloat(f2v)*parseFloat(f2c) + parseFloat(f3v)*parseFloat(f3c) + parseFloat(f4v)*parseFloat(f4c) + parseFloat(f5v)*parseFloat(f5c)
+									document.querySelector('#kq').innerHTML = result;
+								} 
+							</script>
+
+					
+
+				<!-- Copyright -->
+					<div class="copyright">&copy; Redesigned by Group 5, exerpted from HTML5UP.</div>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="{{ url_for('static',filename='assets/js/breakpoints.min.js')}}"> </script>
+		<script src="{{ url_for('static',filename='assets/js/browser.min.js')}}"> </script>
+		<script src="{{ url_for('static',filename='assets/js/jquery.min.js')}}"> </script>
+		<script src="{{ url_for('static',filename='assets/js/jquery.scrolly.min.js')}}"> </script>
+		<script src="{{ url_for('static',filename='assets/js/main.js')}}"> </script>
+		<script src="{{ url_for('static',filename='assets/js/util.js')}}"> </script>
+
+	</body>
+</html>
