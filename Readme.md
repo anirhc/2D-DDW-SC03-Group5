@@ -2,6 +2,7 @@
 In this project, we will predict the target value from the features entered by the user using multiple linear regression.
 
 ## Group Members
+## Equal contributions by all group members.
 SC03 Group 5
 - Muhammad Zulfiqar Bin Bakar (1005023)
 - Huang Xinyi (1005488)
